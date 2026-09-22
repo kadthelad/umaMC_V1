@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://fukrgormm4uw"]
+
+[ext_resource type="Script" uid="uid://b3rrdtxcuhpva" path="res://UI/popup_message.gd" id="1_fahkg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fahkg"]
+bg_color = Color(0.11, 0.11, 0.11, 0.6431373)
+
+[node name="PopupMessage" type="Control" unique_id=1585049549]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fahkg")
+
+[node name="Control" type="Control" parent="." unique_id=1949917745]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -244.0
+offset_right = 222.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGPanel" type="Panel" parent="Control" unique_id=1664035742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/BGPanel" unique_id=529760469]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="Control/BGPanel/VBoxContainer" unique_id=876924322]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ContentTextEdit" type="TextEdit" parent="Control/BGPanel/VBoxContainer" unique_id=247781865]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/read_only = SubResource("StyleBoxFlat_fahkg")
+editable = false
+wrap_mode = 1
+
+[node name="CloseButton" type="Button" parent="Control/BGPanel/VBoxContainer" unique_id=1653555557]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Close"
+
+[connection signal="pressed" from="Control/BGPanel/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

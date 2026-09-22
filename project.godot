@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="UmaMC"
+config/version="1.0"
+run/main_scene="uid://bl0cxd3mosgyi"
+config/features=PackedStringArray("4.7", "Forward Plus")
+run/low_processor_mode=true
+boot_splash/show_image=false
+
+[autoload]
+
+AppGlobal="*uid://dx8x02he5txhy"
+
+[display]
+
+window/vsync/vsync_mode=0
+
+[file_customization]
+
+folder_colors={
+"res://Classes/": "green",
+"res://Data/": "blue",
+"res://Scenes/": "red",
+"res://UI/": "yellow",
+"res://Utils/": "orange"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

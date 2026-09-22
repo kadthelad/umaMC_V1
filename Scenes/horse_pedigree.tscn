@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://du55c46uug2xf"]
+
+[ext_resource type="Script" uid="uid://fycwq0ha4psl" path="res://Scenes/horse_pedigree.gd" id="1_8sof0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfbnf"]
+font_size = 24
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.67058825)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jn5pt"]
+bg_color = Color(0.5080508, 0.3536131, 0.5713435, 1)
+
+[node name="HorsePedigree" type="Control" unique_id=1247166405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_8sof0")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1135226655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1120051292]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=1643988472]
+custom_minimum_size = Vector2(0, 1500)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TITLE" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1046692869]
+layout_mode = 2
+text = "Horse Pedigree"
+label_settings = SubResource("LabelSettings_rfbnf")
+horizontal_alignment = 1
+
+[node name="HorseIDContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=686818574]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer" unique_id=21585629]
+layout_mode = 2
+text = "Horse ID: "
+
+[node name="HorseIDLineEdit" type="LineEdit" parent="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer" unique_id=454362232]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "-1"
+
+[node name="LoadPedigreeOptionButton" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer" unique_id=988794114]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ReloadPedigreeButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer" unique_id=596822514]
+layout_mode = 2
+text = "Reload Pedigree"
+
+[node name="ParentsControl" type="ScrollContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=1183657745]
+custom_minimum_size = Vector2(0, 1500)
+layout_mode = 2
+
+[node name="PedigreeContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer/ParentsControl" unique_id=80176994]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(136, 150)
+layout_mode = 2
+
+[node name="ChildPanel" type="Panel" parent="MarginContainer/ScrollContainer/VBoxContainer/ParentsControl/PedigreeContainer" unique_id=343068256]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jn5pt")
+
+[node name="CurrentHorseLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer/ParentsControl/PedigreeContainer/ChildPanel" unique_id=394466943]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.07333333
+anchor_right = 1.0
+anchor_bottom = 0.9266667
+offset_left = -2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CHILD_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=2029015418]
+layout_mode = 2
+text = "Inbreeding rate:"
+
+[node name="InbreedingContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBoxContainer" unique_id=2133734220]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="item_selected" from="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer/LoadPedigreeOptionButton" to="." method="_on_load_pedigree_option_button_item_selected"]
+[connection signal="pressed" from="MarginContainer/ScrollContainer/VBoxContainer/HorseIDContainer/ReloadPedigreeButton" to="." method="_on_reload_pedigree_button_pressed"]

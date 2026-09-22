@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bl0cxd3mosgyi"]
+
+[ext_resource type="Script" uid="uid://bmfv646xbvahd" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0.33333334, 0.47843137, 0.3019608, 1)
+
+[node name="Main" type="Control" unique_id=897974442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=306402919]
+
+[node name="BGPanel" type="Panel" parent="CanvasLayer" unique_id=1140357111]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="MainContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=380647610]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuHBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainContainer" unique_id=2092391028]
+layout_mode = 2
+
+[node name="HManagerButton" type="Button" parent="CanvasLayer/MainContainer/MenuHBoxContainer" unique_id=2036699264]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Horse Manager"
+
+[node name="HPedigreeButton" type="Button" parent="CanvasLayer/MainContainer/MenuHBoxContainer" unique_id=1364977674]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Horse Pedigree"
+
+[node name="DBPathOptionButton" type="OptionButton" parent="CanvasLayer/MainContainer/MenuHBoxContainer" unique_id=806994274]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddDatabaseButton" type="Button" parent="CanvasLayer/MainContainer/MenuHBoxContainer" unique_id=1473801173]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add Database"
+
+[connection signal="item_selected" from="CanvasLayer/MainContainer/MenuHBoxContainer/DBPathOptionButton" to="." method="_on_db_path_option_button_item_selected"]
+[connection signal="pressed" from="CanvasLayer/MainContainer/MenuHBoxContainer/AddDatabaseButton" to="." method="_on_add_database_button_pressed"]

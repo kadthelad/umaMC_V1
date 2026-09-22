@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dxx6rhsu3fx1"]
+
+[ext_resource type="Script" uid="uid://bauptbwrq0kgc" path="res://UI/parent_container.gd" id="1_kug5h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydbyd"]
+bg_color = Color(0.36222684, 0.5323841, 0.6191909, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydbyd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3e4x4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v01yh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ruup8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ubq85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6kh2p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qhajh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b34c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txvb2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s5k2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxmdl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fheul"]
+bg_color = Color(0.7050147, 0.4116762, 0.40028363, 1)
+
+[node name="ParentContainer" type="VBoxContainer" unique_id=1157829957]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 135.0
+offset_bottom = 150.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_kug5h")
+
+[node name="SirePanel" type="Panel" parent="." unique_id=86578069]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ydbyd")
+
+[node name="SireButton" type="Button" parent="SirePanel" unique_id=1652772541]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ydbyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3e4x4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v01yh")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ruup8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ubq85")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6kh2p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qhajh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b34c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_txvb2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_s5k2y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nxmdl")
+text = "SIRE NAME"
+autowrap_mode = 1
+
+[node name="DamPanel" type="Panel" parent="." unique_id=1763905129]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_fheul")
+
+[node name="DamButton" type="Button" parent="DamPanel" unique_id=163993837]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ydbyd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3e4x4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v01yh")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ruup8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ubq85")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6kh2p")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qhajh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5b34c")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_txvb2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_s5k2y")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nxmdl")
+text = "DAM NAME"
+autowrap_mode = 1

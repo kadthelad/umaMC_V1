@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://v2ud78o8andl"]
+
+[ext_resource type="Script" uid="uid://dji2lvtyuub2v" path="res://Scenes/horse_manager.gd" id="1_nqtcy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfbnf"]
+font_size = 24
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.67058825)
+
+[node name="HorseManager" type="Control" unique_id=1247166405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_nqtcy")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1135226655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1643988472]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1046692869]
+layout_mode = 2
+text = "Horse Manager"
+label_settings = SubResource("LabelSettings_rfbnf")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=265786948]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HorseListContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1042051114]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FilterContainer1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer" unique_id=1203827245]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer1" unique_id=136206247]
+layout_mode = 2
+text = "Filter by: "
+
+[node name="CaracteristicOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer1" unique_id=1940816695]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SortCheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer1" unique_id=1009714308]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sort ASC/DESC"
+
+[node name="FilterContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer" unique_id=114630886]
+layout_mode = 2
+
+[node name="HorseNameLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer2" unique_id=2106717147]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Horse Name"
+
+[node name="ApplyFilterButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer2" unique_id=1825174657]
+layout_mode = 2
+text = "Apply filter"
+
+[node name="HorseList" type="ItemList" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer" unique_id=1576394220]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HorseInfo" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1482547585]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo" unique_id=1970335774]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer" unique_id=2015909240]
+layout_mode = 2
+
+[node name="HorseInfoContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer" unique_id=910604577]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HorseNameLabel" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=1431036879]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "HORSE NAME"
+alignment = 1
+editable = false
+
+[node name="IdContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=954027576]
+layout_mode = 2
+
+[node name="IdLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/IdContainer" unique_id=1438752779]
+unique_name_in_owner = true
+layout_mode = 2
+text = "ID: "
+
+[node name="IdLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/IdContainer" unique_id=1733703122]
+unique_name_in_owner = true
+layout_mode = 2
+editable = false
+
+[node name="GenderCheckButton" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=491739474]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+disabled = true
+text = "Gender: Mare/Stallion"
+
+[node name="BirthDateContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=794250506]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/BirthDateContainer" unique_id=234605851]
+layout_mode = 2
+text = "Date of birth  "
+
+[node name="BirthDateLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/BirthDateContainer" unique_id=104570910]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+placeholder_text = "dd/mm/yyyy"
+editable = false
+
+[node name="DeathDateContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=1387079647]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/DeathDateContainer" unique_id=1738572090]
+layout_mode = 2
+text = "Date of death"
+
+[node name="DeathDateLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/DeathDateContainer" unique_id=38218931]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(135, 0)
+layout_mode = 2
+placeholder_text = "dd/mm/yyyy"
+editable = false
+
+[node name="NotesTextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=286270961]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 325)
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "No notes written..."
+editable = false
+
+[node name="SpeedContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=553985887]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/SpeedContainer" unique_id=969187320]
+layout_mode = 2
+text = "Speed            "
+
+[node name="SpeedLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/SpeedContainer" unique_id=159684313]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "0"
+editable = false
+
+[node name="JumpHeightContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=1640263875]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/JumpHeightContainer" unique_id=1050882241]
+layout_mode = 2
+text = "Jump Height"
+
+[node name="JumpHeightLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/JumpHeightContainer" unique_id=531614303]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "0"
+editable = false
+
+[node name="HeartAmountContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=149435431]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/HeartAmountContainer" unique_id=630673590]
+layout_mode = 2
+text = "Heart Amount"
+
+[node name="HeartAmountLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/HeartAmountContainer" unique_id=327819970]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "0"
+editable = false
+
+[node name="SireIDContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=842652751]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/SireIDContainer" unique_id=1283354596]
+layout_mode = 2
+text = "Sire ID:   "
+
+[node name="SireIDLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/SireIDContainer" unique_id=1865493057]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "0"
+editable = false
+
+[node name="DamIDContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer" unique_id=1893153528]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/DamIDContainer" unique_id=2025564157]
+layout_mode = 2
+text = "Dam ID: "
+
+[node name="DamIDLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer/HorseInfo/MarginContainer/ScrollContainer/HorseInfoContainer/DamIDContainer" unique_id=15119426]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "0"
+editable = false
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2090878692]
+layout_mode = 2
+
+[node name="RegisterHorseButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1762725552]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Register a new horse"
+
+[node name="EditHorseButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=969230639]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+disabled = true
+text = "Edit the selected horse"
+
+[node name="RemoveHorseButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=502987922]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+disabled = true
+text = "Delete the selected horse"
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1066751095]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+disabled = true
+text = "Save changes"
+
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer2/HorseNameLineEdit" to="." method="_on_horse_name_line_edit_text_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/FilterContainer2/ApplyFilterButton" to="." method="_on_apply_filter_button_pressed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/HBoxContainer/HorseListContainer/HorseList" to="." method="_on_horse_list_item_selected"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/RegisterHorseButton" to="." method="_on_register_horse_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/EditHorseButton" to="." method="_on_edit_horse_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/RemoveHorseButton" to="." method="_on_remove_horse_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsContainer/SaveButton" to="." method="_on_save_button_pressed"]

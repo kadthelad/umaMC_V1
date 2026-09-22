@@ -9,4 +9,4 @@ Ce projet ne peut pas être éxecuté en local a cause de son instabilité.
 - Visualisation des données
   
 ## Informations supplémentaires:
-- Le projet a été abandonné pour être réécrit sur un site web en HIML/CSS/JavaScript (avec Astro), projet [UmaMC V2]()
+- Le projet a été abandonné pour être réécrit sur un site web en HIML/CSS/JavaScript (avec Astro), projet [UmaMC V2](https://github.com/kadthelad/umaMC_V2)
